@@ -1,0 +1,70 @@
+/*去除鼠标点击移动出现蓝框*/
+body {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+/*滚动条样式*/
+::-webkit-scrollbar {
+    width: 7px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background: rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: inset006pxrgba(0, 0, 0, 0.2);
+}
+
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset006pxrgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+}
+
+.none {
+    display: none;
+}
+
+.qnone {
+    display: none !important;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.btn.btn-default,
+.btn.white {
+    box-shadow: inset 0 0 0 1px rgba(120, 130, 140, .25);
+}
+
+a:link {
+    text-decoration: none;
+}
+
+/* 指正常的未被访问过的链接*/
+
+a:visited {
+    text-decoration: none;
+}
+
+/*指已经访问过的链接*/
+
+a:hover {
+    text-decoration: none;
+}
+
+/*指鼠标在链接*/
+
+a:active {
+    text-decoration: none;
+}
+
+
+/* 公共样式 */
+.title {
+    padding: 20px;
+    font-size: 20px;
+}
