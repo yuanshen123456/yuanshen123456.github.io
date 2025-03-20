@@ -31,18 +31,23 @@ const password = ref('');
 const onSubmit = async (e: object) => {
     // console.log('submit!', e);
     try {
-        const response = await Login({
-            username: username.value,
-            password: password.value
-        });
-        console.log('response', response);
-        const res = response; // 解析响应体为JSON
-        if (res.status === 200) {
-            const data = (response as any).data;
-            localStorage.setItem('token', data.token);
-            localStorage.setItem('userId', data.userId);
+        if (username.value == '18670535536' && password.value == 'waimai') {
+            localStorage.setItem('token', '1234567890');
+            localStorage.setItem('userId', '1234567890');
             replace('/home');
         }
+        // const response = await Login({
+        //     username: username.value,
+        //     password: password.value
+        // });
+        // console.log('response', response);
+        // const res = response; // 解析响应体为JSON
+        // if (res.status === 200) {
+        //     const data = (response as any).data;
+        //     localStorage.setItem('token', data.token);
+        //     localStorage.setItem('userId', data.userId);
+        //     replace('/home');
+        // }
     } catch (err) {
         // console.error('Error during login:', err);
         // 这里可以添加具体的错误处理逻辑，如显示错误消息给用户
