@@ -11,13 +11,13 @@ onMounted(() => {
 // console.log('window.href', window.location.pathname);
 const token = localStorage.getItem('token');
 const userId = localStorage.getItem('userId');
-if (userId) {
-  GetUserInfo(userId).then(res => {
-    console.log(res)
-  })
-} else {
-  push('/');
-}
+// if (userId) {
+//   GetUserInfo(userId).then(res => {
+//     console.log(res)
+//   })
+// } else {
+//   push('/');
+// }
 if (token && window.location.pathname === '/') {
   push('/home');
 }
