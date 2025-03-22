@@ -18,6 +18,7 @@
   "dependencies": {
     "@zxing/browser": "^0.1.4",
     "axios": "^1.6.8",
+    "crypto-es": "^2.1.0",
     "crypto-js": "^4.2.0",
     "pinia": "^2.1.7",
     "qrcode-decoder": "^0.3.3",

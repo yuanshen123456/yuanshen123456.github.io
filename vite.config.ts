@@ -6,7 +6,7 @@ import vueJsx from '@vitejs/plugin-vue-jsx'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: '/', // 修改为你的仓库名称
+  base: '/yuanshen123456.github.io/', // 修改为你的仓库名称
   plugins: [
     vue(),
     vueJsx(),
