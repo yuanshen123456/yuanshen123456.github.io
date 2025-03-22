@@ -3,17 +3,20 @@ import { onMounted, nextTick } from 'vue';
 import { useRouter, useRoute } from 'vue-router';
 import { Logout } from '@/common/api';
 import headImg from "@/assets/images/head.png";
-const { push, replace } = useRouter();
+const router = useRouter();
+const { push, replace, } = useRouter();
 
 const userId = localStorage.getItem('userId');
 
 const gotoole = (type: string) => {
   switch (type) {
     case 'jiemiJson':
-      window.open('/jiemiJson', '_blank'); // 打开新窗口并跳转到/jiemiJson
+      // window.open('/jiemiJson', '_blank'); // 打开新窗口并跳转到/jiemiJson
+      push('/jiemiJson');
       break;
     case 'qrcode':
-      window.open('/qrcode', '_blank'); // 打开新窗口并跳转到/qrcode
+      window.open(router.resolve('/qrcode').href, '_blank');
+      // window.open('/qrcode', '_blank'); // 打开新窗口并跳转到/qrcode
       break;
   }
 }
