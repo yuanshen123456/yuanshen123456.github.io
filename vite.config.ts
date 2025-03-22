@@ -7,6 +7,15 @@ import vueJsx from '@vitejs/plugin-vue-jsx'
 // https://vitejs.dev/config/
 export default defineConfig({
   base: './', // 修改为你的仓库名称
+  build: {
+    rollupOptions: {
+      output: {
+        chunkFileNames: 'commonjsHelpers-[hash].js', // 移除下划线前缀
+        entryFileNames: '[name]-[hash].js',
+        assetFileNames: 'assets/[name]-[hash][extname]'
+      }
+    }
+  },
   plugins: [
     vue(),
     vueJsx(),
