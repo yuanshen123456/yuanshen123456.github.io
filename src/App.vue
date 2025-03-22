@@ -18,9 +18,9 @@ const userId = localStorage.getItem('userId');
 // } else {
 //   push('/');
 // }
-if (token && window.location.pathname === '/') {
-  push('/home');
-}
+// if (token && window.location.pathname === '/') {
+//   push('/home');
+// }
 </script>
 
 <template>
